@@ -20,7 +20,19 @@ a {
 
 img{
 	margin-bottom: 30px;
+	
 }
+#projects img{
+	width: 70%;
+	max-width: 1000px;
+}
+
+#gallerie_nav img{
+
+	max-width: 200px;
+}
+
+
 .button {
 	margin: 25px 20px;
 }
@@ -92,7 +104,7 @@ background-color: #253A61;
 #content-slider { 
  	position:relative;
 	width:100%;
-	padding-bottom:40%;
+	padding-bottom:100vh;
 	height:0;
 	background-color: black;
 
