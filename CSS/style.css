@@ -1,0 +1,52 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "HP Simplified",Calibri, verdana, arial, sans-serif;
+	background-color: #253A61;
+	text-align: center;
+	color: white;
+	font-size: 50px;
+}
+
+
+
+p {
+	margin: 50px;
+	margin-top: 15%;
+}
+
+a {
+	text-decoration: none;
+	margin: 10px;
+}
+
+img{
+	margin-bottom: 30px;
+	
+}
+
+.button {
+	margin: 25px 20px;
+}
+
+.button a {
+	border: 2px solid #fff;
+	padding: 12px 20px;
+	color: white;
+ -webkit-transition-delay: background 0.5s; /* Safari */
+   transition: background 0.5s;
+}
+
+
+.button a:hover {
+	background-color: white;
+	color:#253A61;
+}
+
+footer {
+	color: white;
+	
+	padding: 20px;
+	font-size: 14px;
+
+}
