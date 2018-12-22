@@ -1,13 +1,14 @@
 body {
 	margin: 0;
 	padding: 0;
-	font-family: "HP Simplified", verdana, arial, sans-serif;
+	font-family: "HP Simplified",Calibri, verdana, arial, sans-serif;
 }
 
 .title {
 	font-size: 60px;
 	font-weight: bold;
-		text-align: center;
+	text-align: center;
+	padding: 15px;
 }
 
 p {
@@ -85,7 +86,7 @@ header{
 }
 
 #header-content #navigation li a {
-	padding: 15px 50px;
+	padding: 15px 45px;
 }
 
 #header-content #navigation li a:hover {
