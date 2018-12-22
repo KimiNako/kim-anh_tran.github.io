@@ -2,7 +2,7 @@ Hello
 I am Kim-Anh, a 4th-year student in Computer Science at INSA Toulouse! :)
 
 This repository is the code of my website! 
-# https://kiminako.github.io/
+# https://kiminako.github.io/fr
 
 Unfortunately, it is currently only available in French! :( 
 I am working on the English and Spanish vers! 
