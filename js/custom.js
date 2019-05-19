@@ -136,3 +136,4 @@ function closepopup(id){
 	document.getElementById(id).style.display='none';
 	document.getElementById('fade').style.display='none'
 }
+
