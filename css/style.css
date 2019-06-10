@@ -423,6 +423,10 @@ HOBBIES SECTION
 	font-size: 22px;
 } 
 
+#hobbies-grid .-width3{
+	width: 33.33%;
+} 
+
 #hobbies .dp > .grid-item:hover > .overlay, #hobbies .dp >.grid-item  {
 	cursor: default
 }
