@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html ng-app="escape-codinsa">
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Escape Cod'INSA - A La recherche du dessert oublié</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+  <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src='index.js'></script>
+
+
+</head>
+<p id="timer"></p>
+<body ng-controller="Ctrl">
+  
+  <img id="logo" src="logo.png"/>
+  <div id="game" ng-if=gameOver>
+    <fieldset>
+      <h2>Pâtes salées</h2>
+      <p>Oh non ! Vous n'avez pas pu sortir de la salle à temps... Il ne reste plus rien à manger... Ah si, juste des pâtes incroyablement sâlées...</p>
+    </fieldset>
+  </div>
+  <div id="game" ng-if=!gameOver>
+    <fieldset id="inspect">
+      <legend>Menu</legend>
+      <div class="inspection" id="default" ng-if="!isOpened">
+        <h2>Une porte fermée... à table !</h2>
+        <p>Ça y est, c'est la finale ! Vous et votre équipe êtes en train de programmer une superbe IA capable de défoncer toutes les autres INSAs. Cependant, à trop réfléchir, la fatigue et la faim commencent à se faire sentir. Heureusement, l'équipe organisatrice a pensé à tout et vient de vous envoyer un message disant que le repas est servi ! </p>
+        <p>Vous vous apprêtez à sortir de votre salle... Quand, étrangement, la porte ne s'ouvre pas ! Vous entendez des voix... Oh non ! C'est encore un coup de CVL !</p>
+        <p>Une table coince l'ouverture de votre porte et aucun moyen de sortir de là... ou presque.</p>
+        <p>Ces tactitiens affirment que si vous faites preuve de tactique en trouvant leur mot de passe. Ils vous ouvriront. En attendant, ils vont chercher le dessert ! </p>
+        <p>Faites vite ! Vous n'avez que 45 min avant qu'il n'y ait plus rien à manger !</p>
+      </div>
+      <div class="inspection" id="inspect_door" >
+        <div ng-if="!isOpened" >
+          <h2>Porte tactique</h2>
+          <p>Une porte bien gardée par nos amis de CVL....</p>
+          <p>Etes-vous digne de tactique ?</p>
+          <input type="text" pattern="[0-9]{4}" placeholder="XXXX" ng-model="door.value">
+          <button type="button" class="btn"  ng-click="validateForm(door)">Valider</button>
+          <p>Nombres d'essais restants : {{door.essais}} / 3</p>
+          <p>Attention ! En cas d'erreur, nos amis de CVL iront manger une de vos parts... et reviendront vous voir dans 10 min...</p>
+        </div>
+        <div ng-if="isOpened">
+          BRAVO ! Vous avez montré que vous êtes un bon tactitien ! Maintenant, direction la salle à manger !<br>
+          Vous avez fini cet escape game en : TODO<br><br>
+          La suite de l'aventure arrive bientôt...
+        </div>
+
+      </div>
+      <div class="inspection" id="inspect_desk">
+        <h2>Un bureau presque propre</h2>
+        <p>Sur ce bureau se trouve un morceau de münster et une feuille de notes qu'un orga a sûrement dû oublié...</p>
+        <img src="morse.png"/>
+      </div>
+      <div class="inspection" id="inspect_table">
+        <h2>Art abstrait</h2>
+        <p>Hum, ces dessins sont bizarres...</p>
+        <img src="table.png"/>
+      </div>
+      <div class="inspection" id="inspect_pillow">
+        <h2>Dormir, c'est tricher !</h2>
+        <p>Votre installation pour éventuellement dormir comme un sac...</p>
+        <p>Tiens ? Quelqu'un a fait tombé une clé USB</p>
+        <button type="button" class="btn" ng-if="!hasUSBKey" ng-click="getUSBKey()">Récupérer la clé</button>
+        <p type="button" class="btn" ng-if="hasUSBKey">Mais, que contient cette clé ?</p>
+      </div>
+      <div class="inspection" id="inspect_computerA">
+        <h2>Computer A</h2>
+        <div ng-if="!computerA.activated">
+          <p>L'ordinateur est verrouillé...</p>
+          <p>Mot de passe</p>
+          <input type="text" pattern="[0-9]{2}" placeholder="00" ng-model="computerA.value">
+          <button type="button" class="btn" ng-click='validateForm(computerA)'>Valider</button>
+          <br>
+          <p>Nombres d'essais restants : {{computerA.essais}} / 3</p>
+          <p>Attention ! Un mot de passe erroné verrouillera l'ordinateur pendant 5 min...</p>
+        </div>
+        <div ng-if="computerA.activated">
+          <p>L'ordinateur est déverrouillé !</p>
+          <button type="button" class="btn" ng-click="displayScreen(computerA)">Afficher l'écran</button>
+          <button type="button" class="btn" ng-if="hasUSBKey" ng-click="insertUSBKey(computerA)">Insérer la clé</button>
+          <br>
+          <img src="computerA_ecran.png" ng-if="computerA.displayScreen"/>
+          <p ng-if="computerA.displayKey">Désolé, cette clé n'est pas compatible avec cet ordinateur...</p>
+        </div>
+      </div>
+      <div class="inspection" id="inspect_computerB">
+        <h2>Computer B</h2>
+        <div ng-if="!computerB.activated">
+          <p>L'ordinateur est verrouillé... Hum ? Que fais cette craie bleue ici ?</p>
+          <p>Mot de passe</p>
+          <input type="text" pattern="[0-9]{4}" placeholder="0000" ng-model="computerB.value">
+          <button type="button" class="btn" ng-click='validateForm(computerB)'>Valider</button>
+          <br>
+          <p>Nombres d'essais restants : {{computerB.essais}} / 3</p>
+          <p>Attention ! Un mot de passe erroné verrouillera l'ordinateur pendant 5 min...</p>
+        </div>
+        <div ng-if="computerB.activated">
+          <p>L'ordinateur est déverrouillé !</p>
+          <p>Oh ! Un grand bruit sonore vient de retentir !</p>
+          <button type="button" class="btn" ng-click="displayScreen(computerB)">Afficher l'écran</button>
+          <button type="button" class="btn" ng-if="hasUSBKey" ng-click="insertUSBKey(computerB)">Insérer la clé</button>
+          <br>
+          <img src="computerB_usb_key.png" ng-if="computerB.displayKey"/>
+          <img src="computerB_ecran.JPG" ng-if="computerB.displayScreen"/>
+        </div>
+      </div>
+      <div class="inspection" id="inspect_toulouse">
+        <h2>Toulouse</h2>
+        <p>Ce chat est un ami à Pablo et parle : </p>
+        <p>"Vous savez... C'est pas la première fois qu'on m'enferme... En <strong>2019</strong>, ils m'ont aussi fait le coup..."</p>
+      </div>
+      <div class="inspection" id="inspect_rouen">
+        <h2>Rouen</h2>
+        <p>Ce chat est sensible aux explosions...  : </p>
+        <p>"Eh ! Eh ! J'ai une hisoire à vous raconter. En <strong>2014</strong>, les orgas ont voulu cuire des saucisses... Sauf qu'ils n'avaient rien pour le faire... Eh, du coup, ils les ont cuites avec une bouilloire."</p>
+      </div>
+      <div class="inspection" id="inspect_lyon">
+        <h2>Lyon</h2>
+        <div ng-if="!hasInsertUSBKey">
+          <p>Chut... Ce chat dort...</p>
+          <p>ZZZ... ZZZ... ZZZ...</p>
+        </div>
+        <div ng-if="hasInsertUSBKey">
+          <p>Lyon vient de se réveiller !</p>
+          <p>"En 2016, j'ai dû descendre jusqu'au <strong class="red">13</strong> ème du classement de Lyon pour avoir une équipe complète pour la finale..."</p>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset id="scene">
+      <legend>Scène</legend>
+      <div id="scene-contents">
+        <div class="interactable" ng-click="inspect('door')" id="scene_door"></div>
+        <div class="interactable" ng-click="inspect('desk')" id="scene_desk"></div>
+        <div class="interactable" ng-click="inspect('table')" id="scene_table"></div>
+        <div class="interactable" ng-click="inspect('pillow')" id="scene_pillow"></div>
+        <div class="interactable" ng-click="inspect('computerA')" id="scene_computerA"></div>
+        <div class="interactable" ng-click="inspect('computerB')" id="scene_computerB"></div>
+        <div class="interactable" ng-click="inspect('toulouse')" id="scene_toulouse"></div>
+        <div class="interactable" ng-click="inspect('rouen')" id="scene_rouen"></div>
+        <div class="interactable" ng-click="inspect('lyon')" id="scene_lyon"></div>
+      </div>
+    </fieldset>
+  </div>
+  <br>
+</body>
+</html>
