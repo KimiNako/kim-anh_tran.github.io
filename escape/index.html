@@ -39,7 +39,7 @@
           <h2>Porte tactique</h2>
           <p>Une porte bien gardée par nos amis de CVL....</p>
           <p>Etes-vous digne de tactique ?</p>
-          <input type="text" pattern="[0-9]{4}" placeholder="XXXX" ng-model="door.value">
+          <input id=code_door type="text" pattern="[0-9]{4}" placeholder="XXXX" ng-model="door.value">
           <button type="button" class="btn"  ng-click="validateForm(door)">Valider</button>
           <p>Nombres d'essais restants : {{door.essais}} / 3</p>
           <p>Attention ! En cas d'erreur, nos amis de CVL iront manger une de vos parts... et reviendront vous voir dans 10 min...</p>
@@ -127,7 +127,7 @@
         </div>
         <div ng-if="hasInsertUSBKey">
           <p>Lyon vient de se réveiller !</p>
-          <p>"En 2016, j'ai dû descendre jusqu'au <strong class="red">13</strong> ème du classement de Lyon pour avoir une équipe complète pour la finale..."</p>
+          <p>"En <strong class="red">20XX</strong>, j'ai dû descendre jusqu'au 13ème du classement de Lyon pour avoir une équipe complète pour la finale..."</p>
         </div>
       </div>
     </fieldset>

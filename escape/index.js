@@ -24,7 +24,7 @@ function Ctrl($scope) {
     if (computer.value != null) {
       if ((computer.id === 'computerA' && computer.value === "41") || 
         (computer.id === 'computerB' && computer.value === "6183") ||
-        (computer.id === 'door' && computer.value === "1310")) {
+        (computer.id === 'door' && computer.value === "2010")) {
           computer.activated = true
           if (computer.id === 'door') {
             $scope.isOpened = true
@@ -72,7 +72,7 @@ function Ctrl($scope) {
 
     if (!$scope.isOpened) {
       document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s "
-      $scope.timer = minutes + "m " + seconds + "s "
+      $scope.timer = (44 - minutes) + "m " + (60 - seconds) + "s "
     } else {
       document.getElementById("timer").innerHTML = ""
     }

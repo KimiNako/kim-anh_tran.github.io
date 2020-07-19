@@ -34,6 +34,10 @@ h2, p {
   overflow: auto;
 }
 
+#code_door::placeholder {
+    color: red;
+}
+
 .inspection {
   display: none;
 }
