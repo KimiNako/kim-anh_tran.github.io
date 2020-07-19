@@ -86,7 +86,7 @@ h2, p {
 #scene_table {
   background-image: url("door.png");
   top: 70px;
-  right: 110px;
+  right: 116px;
   height: 137px;
   width: 215px;
 }
@@ -120,10 +120,10 @@ h2, p {
   width: 50px;
 }
 #scene_rouen {
-  top: 115px;
-  right: 36px;
-  height: 148px;
-  width: 59px;
+  top: 104px;
+  right: 20px;
+  height: 117px;
+  width: 75px;
 }
 #scene_lyon {
   top: 268px;
