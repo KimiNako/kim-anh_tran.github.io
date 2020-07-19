@@ -63,6 +63,7 @@ h2, p {
   position: relative;
   height: 100%;
   background-image: url("bg.png");
+  background-repeat: no-repeat;
 }
 
 #scene_door {
