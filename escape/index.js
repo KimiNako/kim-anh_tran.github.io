@@ -4,7 +4,7 @@ app.controller("Ctrl", Ctrl)
 
 
 function Ctrl($scope) {
-  let countDownDate = new Date().getTime() + 3600000;
+  let countDownDate = new Date().getTime() + 2700000;
   
   $scope.gameOver = false
   $scope.hasUSBKey = false
@@ -70,11 +70,16 @@ function Ctrl($scope) {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s ";
+    if (!$scope.isOpened) {
+      document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s "
+      $scope.timer = minutes + "m " + seconds + "s "
+    } else {
+      document.getElementById("timer").innerHTML = ""
+    }
 
     if (distance < 0  || $scope.gameOver) {
       $scope.gameOver = true
-      document.getElementById("timer").innerHTML = "EXPIRED";
+      document.getElementById("timer").innerHTML = "EXPIRED"
     }
   }, 1000);
 }

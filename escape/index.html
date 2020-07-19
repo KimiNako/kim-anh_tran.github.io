@@ -31,7 +31,7 @@
         <p>Ça y est, c'est la finale ! Vous et votre équipe êtes en train de programmer une superbe IA capable de défoncer toutes les autres INSAs. Cependant, à trop réfléchir, la fatigue et la faim commencent à se faire sentir. Heureusement, l'équipe organisatrice a pensé à tout et vient de vous envoyer un message disant que le repas est servi ! </p>
         <p>Vous vous apprêtez à sortir de votre salle... Quand, étrangement, la porte ne s'ouvre pas ! Vous entendez des voix... Oh non ! C'est encore un coup de CVL !</p>
         <p>Une table coince l'ouverture de votre porte et aucun moyen de sortir de là... ou presque.</p>
-        <p>Ces tactitiens affirment que si vous faites preuve de tactique en trouvant leur mot de passe. Ils vous ouvriront. En attendant, ils vont chercher le dessert ! </p>
+        <p>Ces tactitiens affirment que si vous faites preuve de tactique en trouvant leur mot de passe, ils vous ouvriront. En attendant, ils vont chercher le dessert ! </p>
         <p>Faites vite ! Vous n'avez que 45 min avant qu'il n'y ait plus rien à manger !</p>
       </div>
       <div class="inspection" id="inspect_door" >
@@ -46,7 +46,7 @@
         </div>
         <div ng-if="isOpened">
           BRAVO ! Vous avez montré que vous êtes un bon tactitien ! Maintenant, direction la salle à manger !<br>
-          Vous avez fini cet escape game en : TODO<br><br>
+          Vous avez fini cet escape game en : {{timer}}<br><br>
           La suite de l'aventure arrive bientôt...
         </div>
 
@@ -106,7 +106,7 @@
           <button type="button" class="btn" ng-if="hasUSBKey" ng-click="insertUSBKey(computerB)">Insérer la clé</button>
           <br>
           <img src="computerB_usb_key.png" ng-if="computerB.displayKey"/>
-          <img src="computerB_ecran.JPG" ng-if="computerB.displayScreen"/>
+          <img src="computerB_ecran.png" ng-if="computerB.displayScreen"/>
         </div>
       </div>
       <div class="inspection" id="inspect_toulouse">
