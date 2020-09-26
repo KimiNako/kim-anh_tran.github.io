@@ -22,7 +22,7 @@ function Ctrl($scope) {
 
   $scope.validateForm = function (computer) {
     if (computer.value != null) {
-      if ((computer.id === 'computerA' && computer.value === "DA") || 
+      if ((computer.id === 'computerA' && computer.value === "41") || 
         (computer.id === 'computerB' && computer.value === "6183") ||
         (computer.id === 'door' && computer.value === "2010")) {
           computer.activated = true
