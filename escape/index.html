@@ -39,7 +39,7 @@
           <h2>Porte tactique</h2>
           <p>Une porte bien gardée par nos amis de CVL....</p>
           <p>Etes-vous digne de tactique ?</p>
-          <input id=code_door type="text" pattern="[0-9]{4}" placeholder="XXXX" ng-model="door.value">
+          <input id=code_door type="text" pattern="[0-9]{4}" placeholder="????" ng-model="door.value">
           <button type="button" class="btn"  ng-click="validateForm(door)">Valider</button>
           <p>Nombres d'essais restants : {{door.essais}} / 3</p>
           <p>Attention ! En cas d'erreur, nos amis de CVL iront manger une de vos parts... et reviendront vous voir dans 10 min...</p>
@@ -73,7 +73,7 @@
         <div ng-if="!computerA.activated">
           <p>L'ordinateur est verrouillé...</p>
           <p>Mot de passe</p>
-          <input type="text" pattern="[0-9]{2}" placeholder="00" ng-model="computerA.value">
+          <input type="text" pattern="[0-9]{2}" placeholder="AA" ng-model="computerA.value">
           <button type="button" class="btn" ng-click='validateForm(computerA)'>Valider</button>
           <br>
           <p>Nombres d'essais restants : {{computerA.essais}} / 3</p>
@@ -112,12 +112,11 @@
       <div class="inspection" id="inspect_toulouse">
         <h2>Toulouse</h2>
         <p>Ce chat est un ami à Pablo et parle : </p>
-        <p>"Vous savez... C'est pas la première fois qu'on m'enferme... En 2019, ils m'ont aussi fait le coup..."</p>
+        <p>"Vous savez... C'est pas la première fois qu'on m'enferme... Ils m'ont aussi fait le coup l'année dernière... Ah aussi... en 20?? je crois... que c'était la 3ème édition de Cod'INSA !"</p>
       </div>
       <div class="inspection" id="inspect_rouen">
         <h2>Rouen</h2>
-        <p>Ce chat est sensible aux explosions...  : </p>
-        <p>"Eh ! Eh ! J'ai une hisoire à vous raconter. En 2014, les orgas ont voulu cuire des saucisses... Sauf qu'ils n'avaient rien pour le faire... Eh, du coup, ils les ont cuites avec une bouilloire."</p>
+        <p>"Eh ! Eh ! J'ai une hisoire à vous raconter. Lors d'une édition de Cod'INSA, les orgas ont voulu cuire des saucisses... Sauf qu'ils n'avaient rien pour le faire... Eh, du coup, ils les ont cuites avec une bouilloire."</p>
       </div>
       <div class="inspection" id="inspect_lyon">
         <h2>Lyon</h2>
@@ -127,7 +126,7 @@
         </div>
         <div ng-if="hasInsertUSBKey">
           <p>Lyon vient de se réveiller !</p>
-          <p>"En <strong class="red">20XX</strong>, j'ai dû descendre jusqu'au 13ème du classement de Lyon pour avoir une équipe complète pour la finale..."</p>
+          <p>"Vous savez 41 c'est aussi DA :)"</p>
         </div>
       </div>
     </fieldset>
