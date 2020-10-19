@@ -4,29 +4,57 @@ DEFAULT
 
 body {
 	padding-top: 85px;
-	font-family: 'Lora', serif;
+	font-family: "Lora", serif;
 	font-size: 15px;
-	color: #9d9d9d;
 	line-height: 30px;
 }
 
-ul, ol {
+ul,
+ol {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
+	font-family: "Montserrat", serif;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, label, button, .btn, p {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+label,
+button,
+.btn,
+p {
 	margin: 0;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-	font-family: 'Montserrat', sans-serif;
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: "Montserrat", sans-serif;
 	text-transform: uppercase;
 	display: block;
 }
 
-h1, .h1 {
+h1,
+.h1 {
 	font-size: 40px;
 	font-weight: 700;
 	color: #fff;
@@ -40,15 +68,13 @@ h2,
 
 h2.section-title,
 .h2.section-title {
-	font-size: 30px;
-	font-weight: 400;
 	color: #231f20;
 	margin-top: 115px;
 }
 
 .title-content > .subtitle,
 .title-content > .subtitle {
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-size: 13px;
 	line-height: 30px;
 	text-transform: uppercase;
@@ -59,16 +85,21 @@ h2.section-title,
 }
 
 .title-content p {
-	margin-top: 50px;
+	font-family: 'Montserrat', sans-serif;
 }
 
-h4, .h4 {
+h4,
+.h4 {
 	font-size: 18px;
 	font-weight: 400;
 	color: #55565b;
 }
 
-a, a:hover, a:visited, a:focus, a:active {
+a,
+a:hover,
+a:visited,
+a:focus,
+a:active {
 	text-decoration: none;
 	color: inherit;
 }
@@ -78,15 +109,19 @@ section {
 	background-color: #ffffff;
 }
 
+.item {
+	margin:0;
+}
 /**********************
 BUTTONS
 ***********************/
 
-button,	.btn {
+button,
+.btn {
 	border: 0;
 	padding: 0;
 	background: transparent;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	text-transform: uppercase;
 	outline: none;
 }
@@ -95,7 +130,8 @@ button,	.btn {
 ICON FONT
 ***********************/
 
-.ico, .fa {
+.ico,
+.fa {
 	color: #ffffff;
 	-moz-transition: all 0.2s ease-in-out;
 	-webkit-transition: all 0.2s ease-in-out;
@@ -113,10 +149,9 @@ ICON FONT
 NAVIGATION
 ***********************/
 
-
 .navbar {
 	min-height: 90px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	text-transform: uppercase;
 }
 
@@ -133,26 +168,26 @@ NAVIGATION
 	max-height: 44px;
 }
 
-.navbar-default .navbar-nav>ul {
-    width: 70%;
-    margin: auto 0;
+.navbar-default .navbar-nav > ul {
+	width: 70%;
+	margin: auto 0;
 }
 
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav > li > a {
 	font-size: 13px;
 	color: #707070;
 	padding: 35px 23px;
 }
 
-.navbar-default .navbar-nav>li>a:focus, 
-.navbar-default .navbar-nav>li>a:hover {
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
 	color: #00c7fc;
 	background-color: transparent;
 }
 
-.navbar-default .navbar-nav>.active>a, 
-.navbar-default .navbar-nav>.active>a:focus, 
-.navbar-default .navbar-nav>.active>a:hover {
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
 	color: #00c7fc;
 	background-color: transparent;
 }
@@ -168,23 +203,23 @@ NAVIGATION
 	background: #707070;
 }
 
-.navbar-default .navbar-toggle:focus, 
+.navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover {
 	background-color: transparent;
 }
 
-.navbar-default .navbar-toggle:focus .icon-bar, 
+.navbar-default .navbar-toggle:focus .icon-bar,
 .navbar-default .navbar-toggle:hover .icon-bar {
 	background: #00c7fc;
 }
-.center{
-    margin: auto;
-    width: 90%;
-    float:none;
+.center {
+	margin: auto;
+	width: 90%;
+	float: none;
 	text-align: center;
 }
 
-.nav >li{
+.nav > li {
 	display: inline-block;
 	margin: auto;
 	float: none;
@@ -206,7 +241,7 @@ HOME SECTION
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0,0,0,.8);
+	background: rgba(0, 0, 0, 0.8);
 }
 
 .home-content {
@@ -216,6 +251,7 @@ HOME SECTION
 	transform: translateY(-50%);
 	text-align: center;
 	color: #ffffff;
+	margin: 0
 }
 
 .home-content .h1,
@@ -229,8 +265,8 @@ HOME SECTION
 
 .home-content .btn {
 	letter-spacing: 0.2em;
-	margin:0 15px;
-	padding:0 15px;
+	margin: 0 15px;
+	padding: 0 15px;
 	text-align: center;
 	/*width: 200px;*/
 	/*height: 60px;*/
@@ -248,11 +284,11 @@ HOME SECTION
 }
 
 .home-content .btn-default:hover,
-.home-content .btn-default.active.focus, 
-.home-content .btn-default.active:focus, 
-.home-content .btn-default.active:hover, 
-.home-content .btn-default:active.focus, 
-.home-content .btn-default:active:focus, 
+.home-content .btn-default.active.focus,
+.home-content .btn-default.active:focus,
+.home-content .btn-default.active:hover,
+.home-content .btn-default:active.focus,
+.home-content .btn-default:active:focus,
 .home-content .btn-default:active:hover {
 	background: #ffffff;
 	color: #231f20;
@@ -264,11 +300,11 @@ HOME SECTION
 }
 
 .home-content .btn-primary:hover,
-.home-content .btn-primary.active.focus, 
-.home-content .btn-primary.active:focus, 
-.home-content .btn-primary.active:hover, 
-.home-content .btn-primary:active.focus, 
-.home-content .btn-primary:active:focus, 
+.home-content .btn-primary.active.focus,
+.home-content .btn-primary.active:focus,
+.home-content .btn-primary.active:hover,
+.home-content .btn-primary:active.focus,
+.home-content .btn-primary:active:focus,
 .home-content .btn-primary:active:hover {
 	background: #ffffff;
 	color: #00c7fc;
@@ -288,15 +324,19 @@ HOME SECTION
 }
 
 @keyframes scrollDown {
-	0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
+	0%,
+	20%,
+	50%,
+	80%,
+	100% {
+		transform: translateY(0);
+	}
 	40% {
-    transform: translateY(-30px);
-  }
+		transform: translateY(-30px);
+	}
 	60% {
-    transform: translateY(-15px);
-  }
+		transform: translateY(-15px);
+	}
 }
 
 /**********************
@@ -310,27 +350,39 @@ ABOUT ME SECTION
 	background-size: cover;
 }
 
+#about img {
+	margin: 50px 0 30px;
+}
+
 #about .title-content {
 	color: #ffffff;
 	font-size: 18px;
 }
 
-#about a{
-	color: #2188C2;
+#about .title-content p {
+	margin-top: 20px;
+}
+
+#about .contact {
+	margin-top: 30px;
+}
+#about a {
+	color: #2188c2;
 	font-weight: bold;
 }
 
-#about a:hover{
-	color: #2188C2;
+#about a:hover {
+	color: #2188c2;
 	font-weight: bold;
 	text-decoration: underline;
 }
-#about .about-icon{
+#about .about-icon {
 	padding: 0 30px;
+	color: white;
 }
 
-#about .about-icon:hover{
-	color: white;
+#about .about-icon:hover {
+	color: #2188c2;
 }
 
 /**********************
@@ -340,8 +392,8 @@ SKILLS SECTION
 #skills .progress {
 	background: #56c553;
 	background: -moz-linear-gradient(left, #56c553 0%, #00c7fc 100%);
-	background: -webkit-linear-gradient(left, #56c553 0%,#00c7fc 100%);
-	background: linear-gradient(to right, #56c553 0%,#00c7fc 100%);
+	background: -webkit-linear-gradient(left, #56c553 0%, #00c7fc 100%);
+	background: linear-gradient(to right, #56c553 0%, #00c7fc 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#56c553', endColorstr='#00c7fc',GradientType=1 );
 	height: 7px;
 	border-radius: 7px;
@@ -358,53 +410,62 @@ SKILLS SECTION
 	background-color: transparent;
 }
 
-
-
 #skills .progress > .overlay {
 	float: left;
 	height: 7px;
 	background: rgba(255, 255, 255, 0.5);
 }
 
-
 .skills-container {
-	padding: 50px 0 100px ;
+	padding: 50px 0 100px;
 }
 
 .skills-container .skill {
 	position: relative;
 	margin: 0 10px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
+	display: flex;
+	flex-direction: column;
 }
 
 .skills-container .skill:first-of-type {
 	margin-top: 0;
 }
 
-.skills-container  .skill  .name {
+.skills-container .skill .name {
 	text-transform: uppercase;
 	color: #55565b;
-	padding: 0 5px;
-	margin: 15px 0;
+	margin-top: 15px;
+	font-size: 22px;
+	font-weight: 700;
 }
 
-.skills-container .skill .percent {
-	position: absolute;
-	bottom: 20px;
-	-webkit-transform: translateX(-30%);
-	-ms-transform: translateX(-30%);
-	transform: translateX(-30%);
-	font-size: 20px;
-	color: #444444;
+.skills-container .skill-row2 {
+	margin-top: 50px;
+}
+.skills-container .skill .level {
+	text-transform: uppercase;
+	font-weight: 700;
+	margin: 30px 0 20px;
 }
 
-.skills-container .skill .icon{
+.skills-container .skill .skill-content {
+	text-align: center;
+	margin-right: 10px;
+    margin-bottom: 20px;
+    min-width: 70px;
+    font-size: 12px;
+}
+
+.skills-container .skill .icon {
 	font-size: 3.5em;
-	max-height: 52px;
+	height: 75px;
+	max-width: 75px;
 }
 
-.skills-container  .skill  img{
-	margin-bottom: 10px;
+.skills-container .skill .content {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 /**********************
@@ -412,38 +473,39 @@ HOBBIES SECTION
 ***********************/
 
 #hobbies-container {
-	padding-bottom:100px;
+	padding-bottom: 100px;
 }
 
 #hobbies .container h4 {
-	margin:100px 0 20px;
+	margin: 100px 0 20px;
 }
 
-#hobbies-grid .description{
+#hobbies-grid .description {
 	font-size: 22px;
-} 
+}
 
-#hobbies-grid .-width3{
+#hobbies-grid .-width3 {
 	width: 33.33%;
-} 
+}
 
-#hobbies .dp > .grid-item:hover > .overlay, #hobbies .dp >.grid-item  {
-	cursor: default
+#hobbies .dp > .grid-item:hover > .overlay,
+#hobbies .dp > .grid-item {
+	cursor: default;
 }
 
 .container-video {
-    position: relative;
-    width: 33.33%;
-    height: 0;
-    padding-bottom:15%;
+	position: relative;
+	width: 33.33%;
+	height: 0;
+	padding-bottom: 15%;
 	float: left;
 }
 .video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 /*
 #hobbies {
@@ -602,7 +664,7 @@ WORKS SECTION
 ***********************/
 
 #portfolio {
-		background: #f7f7f7;
+	background: #f7f7f7;
 }
 #works-navigation {
 	margin: 48px auto 0;
@@ -614,9 +676,9 @@ WORKS SECTION
 	float: none;
 }
 
-#works-navigation .navbar-nav>li>.filter {
+#works-navigation .navbar-nav > li > .filter {
 	position: relative;
-	margin: 0 15px; 
+	margin: 0 15px;
 	padding: 15px 5px;
 	background: transparent;
 	color: #55565b;
@@ -628,30 +690,29 @@ WORKS SECTION
 	transition: all 0.3s ease-in-out;
 }
 
-#works-navigation .navbar-nav>li>.filter:hover {
+#works-navigation .navbar-nav > li > .filter:hover {
 	color: #00c7fc;
 }
 
-#works-navigation .navbar-nav>li>.filter:after {
-	content: '';
+#works-navigation .navbar-nav > li > .filter:after {
+	content: "";
 	position: absolute;
-    display: block;
-    width: 0;
-    height: 1px;
-    left: 0;
-    bottom: 0;
-    background: #00c7fc;
-    -moz-transition: width 0.3s ease-in-out;
+	display: block;
+	width: 0;
+	height: 1px;
+	left: 0;
+	bottom: 0;
+	background: #00c7fc;
+	-moz-transition: width 0.3s ease-in-out;
 	-webkit-transition: width 0.3s ease-in-out;
 	transition: width 0.3s ease-in-out;
 }
 
-#works-navigation .navbar-nav>li>.filter.mixitup-control-active:after, 
-#works-navigation .navbar-nav>li>.filter.mixitup-control-active:hover:after, 
-#works-navigation .navbar-nav>li>.filter.mixitup-control-active:focus:after {
-	 width: 100%;
+#works-navigation .navbar-nav > li > .filter.mixitup-control-active:after,
+#works-navigation .navbar-nav > li > .filter.mixitup-control-active:hover:after,
+#works-navigation .navbar-nav > li > .filter.mixitup-control-active:focus:after {
+	width: 100%;
 }
-
 
 .works-container {
 	margin-top: 58px;
@@ -681,7 +742,7 @@ WORKS SECTION
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(22, 23, 24, 0.8);
+	background: rgba(22, 23, 24, 0.9);
 	-webkit-transform: scale(0.1);
 	-ms-transform: scale(0.1);
 	transform: scale(0.1);
@@ -699,7 +760,7 @@ WORKS SECTION
 }
 
 .grid-item > .overlay::after {
-	content: '';
+	content: "";
 	position: absolute;
 	top: 9px;
 	left: 9px;
@@ -716,7 +777,7 @@ WORKS SECTION
 	transform: translateY(-50%);
 	width: 100%;
 	padding: 15px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	text-align: center;
 	z-index: 2;
 }
@@ -732,20 +793,18 @@ WORKS SECTION
 	color: #fff;
 }
 
-
 .grid-item > img {
 	display: block;
 	width: 100%;
 	-moz-transition: -moz-transform 0.3s ease-in-out;
 	-webkit-transition: -webkit-transform 0.3s ease-in-out;
 	transition: transform 0.3s ease-in-out;
-
 }
 
 .grid-item:hover img {
 	-ms-transform: scale(1.2); /* IE 9 */
-    -webkit-transform: scale(1.2); /* Safari */
-    transform: scale(1.2);
+	-webkit-transform: scale(1.2); /* Safari */
+	transform: scale(1.2);
 }
 
 .grid-item.-width2 {
@@ -781,7 +840,7 @@ CONTACT US SECTION
 	background: transparent;
 	color: #fff;
 	border: 1px solid #55565b;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-size: 15px;
 	line-height: 1;
 
@@ -796,17 +855,21 @@ CONTACT US SECTION
 	border: 1px solid #fff;
 }
 
-#contact .subscribe-form #Email::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #55565b;
+#contact .subscribe-form #Email::-webkit-input-placeholder {
+	/* Chrome/Opera/Safari */
+	color: #55565b;
 }
-#contact .subscribe-form #Email::-moz-placeholder { /* Firefox 19+ */
-  color: #55565b;
+#contact .subscribe-form #Email::-moz-placeholder {
+	/* Firefox 19+ */
+	color: #55565b;
 }
-#contact .subscribe-form #Email:-ms-input-placeholder { /* IE 10+ */
-  color: #55565b;
+#contact .subscribe-form #Email:-ms-input-placeholder {
+	/* IE 10+ */
+	color: #55565b;
 }
-#contact .subscribe-form #Email:-moz-placeholder { /* Firefox 18- */
-  color: #55565b;
+#contact .subscribe-form #Email:-moz-placeholder {
+	/* Firefox 18- */
+	color: #55565b;
 }
 
 /****** Contact Info *****/
@@ -826,7 +889,7 @@ CONTACT US SECTION
 }
 
 .contact-info .data {
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	-moz-transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
@@ -869,13 +932,12 @@ CONTACT US SECTION
 }
 
 .social-info > a.-github:hover {
-	background: #3B3D3D;
+	background: #3b3d3d;
 }
 
 .social-info > a.-linkedin:hover {
 	background: #3371b7;
 }
-
 
 .social-info > a > .ico,
 .social-info > a:hover > .ico {
@@ -892,7 +954,7 @@ FOOTER SECTION
 }
 
 #footer .copyright {
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	text-align: center;
 }
 
@@ -946,22 +1008,19 @@ RESPONSIVE
 ***********************/
 
 @media only screen and (max-width: 1199px) {
-
 	/**********************
 	WORKS SECTION
 	***********************/
 	.grid-item > .overlay > .content > .description {
 		font-size: 20px;
 	}
-
 }
 
 @media only screen and (max-width: 991px) {
-
 	/**********************
 	NAVIGATION
 	***********************/
-	.navbar-default .navbar-nav>li>a {
+	.navbar-default .navbar-nav > li > a {
 		padding: 32px 15px 33px;
 	}
 
@@ -973,7 +1032,7 @@ RESPONSIVE
 	#main-navigation .navbar-form input {
 		width: 120px;
 	}
-	
+
 	/**********************
 	HOBBIES SECTION
 	***********************/
@@ -999,11 +1058,9 @@ RESPONSIVE
 	.row.contact-holder > div:last-of-type {
 		margin-top: 40px;
 	}
-
 }
 
 @media only screen and (max-width: 479px) {
-
 	/**********************
 	WORKS SECTION
 	***********************/
@@ -1021,15 +1078,13 @@ RESPONSIVE
 	.skills-container > .skill > .percent {
 		font-size: 15px;
 	}
-
 }
 
 @media only screen and (max-width: 767px) {
-
 	/**********************
 	NAVIGATION
 	***********************/
-	.navbar-default .navbar-nav>li>a {
+	.navbar-default .navbar-nav > li > a {
 		padding: 15px 15px 15px 27px;
 		text-align: center;
 	}
@@ -1066,15 +1121,15 @@ RESPONSIVE
 	#main-navigation .navbar-form input:active {
 		border-bottom: 1px solid #00c7fc;
 	}
-	
+
 	/**********************
 	HOBBIES SECTION
 	***********************/
-	#hobbies>.container>.row:last-of-type {
+	#hobbies > .container > .row:last-of-type {
 		margin-top: 0px;
 	}
 
-	#hobbies>.container>.row>div {
+	#hobbies > .container > .row > div {
 		margin-top: 30px;
 	}
 
@@ -1093,20 +1148,21 @@ RESPONSIVE
 	#about .title-content .subtitle {
 		font-size: 15px;
 		text-shadow: 1px 1px 1px #161718;
+		font-family: 'Montserrat', sans-serif;
 	}
 
 	/**********************
 	CONTACT SECTION
 	***********************/
 	.subscribe-form .btn {
-	    display: block;
-	    margin: 40px auto 0;
+		display: block;
+		margin: 40px auto 0;
 	}
 
 	.row.contact-holder > div {
 		text-align: center;
 	}
-    
+
 	.row.contact-holder > div:not(:first-of-type) {
 		margin-top: 40px;
 	}
@@ -1121,28 +1177,25 @@ RESPONSIVE
 		margin: 20px auto 0;
 		text-align: center;
 	}
-
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 900px) {
 	#hobbies .hobbies {
-    min-width: 300px;
+		min-width: 300px;
 	}
-	.skills-container .skill .icon{
+	.skills-container .skill .icon {
 		margin: 0 50px;
 	}
-	#skills .progress{
+	#skills .progress {
 		width: 70%;
 	}
 }
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1200px) {
 	#hobbies .hobbies {
-    min-width: 300px;
+		min-width: 300px;
 	}
-	#skills .progress{
+	#skills .progress {
 		width: 60%;
 	}
 }
-
-
