@@ -1,112 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="escape-codinsa">
 
 <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width'>
-    <title>Privacy Policy</title>
-    <style>
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            padding: 1em;
-        }
-    </style>
-</head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Escape Cod'INSA - A La recherche du dessert oublié</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+  <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src='index.js'></script>
 
-<body>
-    <strong>Privacy Policy</strong>
-    <p>
-        Where are you, Cinderella? is a free app provided by
-        KimiNako at no cost and is intended for use as
-        is.
-    </p>
-    <p>
-        This page is used to inform visitors regarding
-        policies with the collection, use, and disclosure of personal
-        information if anyone decided to use the app.
-    </p>
-    <p>
-        If you choose to use the app, then you agree to
-        the collection and use of information in relation to this
-        policy. The personal information that is collected is
-        used for providing and improving the app. I will not use or share your information with
-        anyone except as described in this privacy policy.
-    </p>
-    <p><strong>Information Collection and Use</strong></p>
-    <p>
-        I do not knowingly collect personally
-        identifiable information.
-        If the app may require you to provide certain personally
-        identifiable information. The information that
-        is requested will be retained on your device and is not collected by me in any way.
-    </p>
-    <div>
-        <p>
-            The app does use third-party services that may collect
-            information used to identify you.
+
+</head>
+<p id="timer"></p>
+
+<body ng-controller="Ctrl">
+
+  <img id="logo" src="logo.png" />
+  <div id="game" ng-if=gameOver>
+    <fieldset>
+      <h2>Pâtes salées</h2>
+      <p>Oh non ! Vous n'avez pas pu sortir de la salle à temps... Il ne reste plus rien à manger... Ah si, juste des
+        pâtes incroyablement sâlées...</p>
+    </fieldset>
+  </div>
+  <div id="game" ng-if=!gameOver>
+    <fieldset id="inspect">
+      <legend>Menu</legend>
+      <div class="inspection" id="default" ng-if="!isOpened">
+        <h2>Une porte fermée... à table !</h2>
+        <p>Ça y est, c'est la finale ! Vous et votre équipe êtes en train de programmer une superbe IA capable de
+          défoncer toutes les autres INSAs. Cependant, à trop réfléchir, la fatigue et la faim commencent à se faire
+          sentir. Heureusement, l'équipe organisatrice a pensé à tout et vient de vous envoyer un message disant que le
+          repas est servi ! </p>
+        <p>Vous vous apprêtez à sortir de votre salle... Quand, étrangement, la porte ne s'ouvre pas ! Vous entendez des
+          voix... Oh non ! C'est encore un coup de CVL !</p>
+        <p>Une table coince l'ouverture de votre porte et aucun moyen de sortir de là... ou presque.</p>
+        <p>Ces tactitiens affirment que si vous faites preuve de tactique en trouvant leur mot de passe, ils vous
+          ouvriront. En attendant, ils vont chercher le dessert ! </p>
+        <p>Faites vite ! Vous n'avez que 45 min avant qu'il n'y ait plus rien à manger !</p>
+      </div>
+      <div class="inspection" id="inspect_door">
+        <div ng-if="!isOpened">
+          <h2>Porte tactique</h2>
+          <p>Une porte bien gardée par nos amis de CVL....</p>
+          <p>Etes-vous digne de tactique ?</p>
+          <input id=code_door type="text" pattern="[0-9]{4}" placeholder="????" ng-model="door.value">
+          <button type="button" class="btn" ng-click="validateForm(door)">Valider</button>
+          <p>Nombres d'essais restants : {{door.essais}} / 3</p>
+          <p>Attention ! En cas d'erreur, nos amis de CVL iront manger une de vos parts... et reviendront vous voir dans
+            10 min...</p>
+        </div>
+        <div ng-if="isOpened">
+          BRAVO ! Vous avez montré que vous êtes un bon tactitien ! Maintenant, direction la salle à manger !<br>
+          Vous avez fini cet escape game en : {{timer}}<br><br>
+          La suite de l'aventure arrive bientôt...
+        </div>
+
+      </div>
+      <div class="inspection" id="inspect_desk">
+        <h2>Un bureau presque propre</h2>
+        <p>Sur ce bureau se trouve un morceau de münster et une feuille de notes qu'un orga a sûrement dû oublié...</p>
+        <img src="morse.png" />
+      </div>
+      <div class="inspection" id="inspect_table">
+        <h2>Art abstrait</h2>
+        <p>Hum, ces dessins sont bizarres...</p>
+        <img src="table.png" />
+      </div>
+      <div class="inspection" id="inspect_pillow">
+        <h2>Dormir, c'est tricher !</h2>
+        <p>Votre installation pour éventuellement dormir comme un sac...</p>
+        <p>Tiens ? Quelqu'un a fait tombé une clé USB</p>
+        <button type="button" class="btn" ng-if="!hasUSBKey" ng-click="getUSBKey()">Récupérer la clé</button>
+        <p type="button" class="btn" ng-if="hasUSBKey">Mais, que contient cette clé ?</p>
+      </div>
+      <div class="inspection" id="inspect_computerA">
+        <h2>Computer A</h2>
+        <div ng-if="!computerA.activated">
+          <p>L'ordinateur est verrouillé...</p>
+          <p>Mot de passe</p>
+          <input type="text" pattern="[0-9]{2}" placeholder="00" ng-model="computerA.value">
+          <button type="button" class="btn" ng-click='validateForm(computerA)'>Valider</button>
+          <br>
+          <p>Nombres d'essais restants : {{computerA.essais}} / 3</p>
+          <p>Attention ! Un mot de passe erroné verrouillera l'ordinateur pendant 5 min...</p>
+        </div>
+        <div ng-if="computerA.activated">
+          <p>L'ordinateur est déverrouillé !</p>
+          <button type="button" class="btn" ng-click="displayScreen(computerA)">Afficher l'écran</button>
+          <button type="button" class="btn" ng-if="hasUSBKey" ng-click="insertUSBKey(computerA)">Insérer la clé</button>
+          <br>
+          <img src="computerA_ecran.png" ng-if="computerA.displayScreen" />
+          <p ng-if="computerA.displayKey">Désolé, cette clé n'est pas compatible avec cet ordinateur...</p>
+        </div>
+      </div>
+      <div class="inspection" id="inspect_computerB">
+        <h2>Computer B</h2>
+        <div ng-if="!computerB.activated">
+          <p>L'ordinateur est verrouillé... Hum ? Que fais cette craie bleue ici ?</p>
+          <p>Mot de passe</p>
+          <input type="text" pattern="[0-9]{4}" placeholder="0000" ng-model="computerB.value">
+          <button type="button" class="btn" ng-click='validateForm(computerB)'>Valider</button>
+          <br>
+          <p>Nombres d'essais restants : {{computerB.essais}} / 3</p>
+          <p>Attention ! Un mot de passe erroné verrouillera l'ordinateur pendant 5 min...</p>
+        </div>
+        <div ng-if="computerB.activated">
+          <p>L'ordinateur est déverrouillé !</p>
+          <p>Oh ! Un grand bruit sonore vient de retentir !</p>
+          <button type="button" class="btn" ng-click="displayScreen(computerB)">Afficher l'écran</button>
+          <button type="button" class="btn" ng-if="hasUSBKey" ng-click="insertUSBKey(computerB)">Insérer la clé</button>
+          <br>
+          <img src="computerB_usb_key.png" ng-if="computerB.displayKey" />
+          <img src="computerB_ecran.png" ng-if="computerB.displayScreen" />
+        </div>
+      </div>
+      <div class="inspection" id="inspect_toulouse">
+        <h2>Toulouse</h2>
+        <p>Ce chat est un ami à Pablo et parle : </p>
+        <p>"Vous savez... C'est pas la première fois qu'on m'enferme... Ils m'ont aussi fait le coup l'année dernière...
+          Ah aussi... en 20?? je crois... que c'était la troisème édition de Cod'INSA !"</p>
+      </div>
+      <div class="inspection" id="inspect_rouen">
+        <h2>Rouen</h2>
+        <p>"Eh ! Eh ! J'ai une hisoire à vous raconter. Lors d'une édition de Cod'INSA, les orgas ont voulu cuire des
+          saucisses... Sauf qu'ils n'avaient rien pour le faire... Eh, du coup, ils les ont cuites avec une bouilloire."
         </p>
-        <p>
-            Link to the privacy policy of third-party service providers used
-            by the app
-        </p>
-        <ul>
-            <li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Google Play
-                    Services</a></li><!----><!----><!---->
-        </ul>
-    </div>
-    <p><strong>Log Data</strong></p>
-    <p>
-        I want to inform you that whenever you
-        use the app, in a case of an error in the app,
-        only data and information (through third-party
-        products) on your phone called Log Data are collected. This Log Data may
-        include information such as your device Internet Protocol
-        (“IP”) address, device name, operating system version, the
-        configuration of the app when utilizing the app,
-        the time and date of your use of the app, and other
-        statistics.
-    </p>
-    <p><strong>Service Providers</strong></p>
-    <p>
-        I may employ third-party companies and
-        individuals due to the following reasons:
-    </p>
-    <ul>
-        <li>To provide the app on my behalf;</li>
-        <li>To assist me in analyzing how the app is used.</li>
-    </ul>
-    <p>
-        I want to inform users of this app
-        that these third parties have access to their Personal
-        Information. The reason is to perform the tasks assigned to
-        them on my behalf. However, they are obligated not to
-        disclose or use the information for any other purpose.
-    </p>
-    <p><strong>Links to Other Sites</strong></p>
-    <p>
-        This app may contain links to other sites. If you click on
-        a third-party link, you will be directed to that site. Note
-        that these external sites are not operated by me.
-        Therefore, I strongly advise you to review the
-        Privacy Policy of these websites. I have
-        no control over and assume no responsibility for the content,
-        privacy policies, or practices of any third-party sites or
-        services.
-    </p>
-    <p><strong>Changes to This Privacy Policy</strong></p>
-    <p>
-        I may update the privacy policy from
-        time to time. Thus, you are advised to review this page
-        periodically for any changes. I will
-        notify you of any changes by posting the new Privacy Policy on
-        this page.
-    </p>
-    <p>This policy is effective as of 2023-03-12</p>
-    <p><strong>Contact</strong></p>
-    <p>
-        If you have any questions or suggestions about my
-        Privacy Policy, do not hesitate to contact me at kiminako.pro@gmail.com
-    </p>
+      </div>
+      <div class="inspection" id="inspect_lyon">
+        <h2>Lyon</h2>
+        <div ng-if="!hasInsertUSBKey">
+          <p>Chut... Ce chat dort...</p>
+          <p>ZZZ... ZZZ... ZZZ...</p>
+        </div>
+        <div ng-if="hasInsertUSBKey">
+          <p>Lyon vient de se réveiller !</p>
+          <p>"Ces boules sont jolies ! Cela fait combien ?"</p>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset id="scene">
+      <legend>Scène</legend>
+      <div id="scene-contents">
+        <div class="interactable" ng-click="inspect('door')" id="scene_door"></div>
+        <div class="interactable" ng-click="inspect('desk')" id="scene_desk"></div>
+        <div class="interactable" ng-click="inspect('table')" id="scene_table"></div>
+        <div class="interactable" ng-click="inspect('pillow')" id="scene_pillow"></div>
+        <div class="interactable" ng-click="inspect('computerA')" id="scene_computerA"></div>
+        <div class="interactable" ng-click="inspect('computerB')" id="scene_computerB"></div>
+        <div class="interactable" ng-click="inspect('toulouse')" id="scene_toulouse"></div>
+        <div class="interactable" ng-click="inspect('rouen')" id="scene_rouen"></div>
+        <div class="interactable" ng-click="inspect('lyon')" id="scene_lyon"></div>
+      </div>
+    </fieldset>
+  </div>
+  <br>
 </body>
 
 </html>
