@@ -1,0 +1,49 @@
+@import './variables.scss';
+
+body {
+    margin: 0;
+}
+
+#app {
+    font-family: "Montserrat", serif;
+    text-align: center;
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    height: 90px;
+    justify-content: center;
+}
+
+nav a {
+    color: map-get($theme-color, "grey");
+    font-size: 13px;
+    margin: 0 23px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+        color: map-get($theme-color, "blue");
+    }
+}
+
+h1,
+h2,
+h5 {
+    display: block;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 14px;
+    font-weight: 500;
+}
