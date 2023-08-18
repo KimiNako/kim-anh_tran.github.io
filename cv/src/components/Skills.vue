@@ -8,7 +8,8 @@
 					<v-row>									
             <v-col class="skills-content" v-for="item in skill.items" :key="item.text">
               <img :src="`src/assets/skills/${item.img}`" class="icon" :title=item.text>
-              <div>{{ item.text }}</div>
+              <div v-if="!skill.trad">{{ item.text }}</div>
+              <div v-else>{{ $t(item.text) }}</div>
             </v-col>
           </v-row>
         </div>
@@ -55,7 +56,7 @@ const skills = [
       { text: "Photoshop", img: "photoshop.svg" },
       { text: "Premiere Pro", img: "premiere.svg" },
       { text: "After Effect", img: "adobeaftereffect_logo.svg" },
-      { text: "Animate", img: "adobeaftereffect_logo.svg" },
+      { text: "Animate", img: "adobeanimate_logo.svg" },
       { text: "Audition", img: "adobeaudition_logo.svg" },
       { text: "Illustrator", img: "adobeillustrator_logo.svg" },
       { text: "Blender", img: "blender_logo.png" },
@@ -64,28 +65,29 @@ const skills = [
   {
     title: 'Game Development',
     items: [
-      { text: "Ren'Py", img: "" },
-      { text: "Unity", img: "" },
-      { text: "Godot", img: "" },
+      { text: "Ren'Py", img: "renpy_logo.png" },
+      { text: "Unity", img: "unity_logo.png" },
+      { text: "Godot", img: "godot_logo.png" },
     ]
   },
   {
     title: 'Project Management',
     items: [
-      { text: "Git", img: "" },
-      { text: "GitHub", img: "" },
-      { text: "GitLab", img: "" },
-      { text: "Trello", img: "" },
-      { text: "JIRA", img: "" },
+      { text: "Git", img: "git_logo.png" },
+      { text: "GitHub", img: "github_logo.png" },
+      { text: "GitLab", img: "gitlab_logo.png" },
+      { text: "Trello", img: "trello_logo.png" },
+      { text: "JIRA", img: "jira_logo.png" },
     ]
   },
   {
     title: 'Speaking',
+    trad: true,
     items: [
-      { text: "French", img: "" },
-      { text: "English", img: "" },
-      { text: "Vietnamese", img: "" },
-      { text: "Spanish", img: "" },
+      { text: "French", img: "france-flag.svg" },
+      { text: "English", img: "united-kingdom-flag.svg" },
+      { text: "Vietnamese", img: "vietnam-flag.svg" },
+      { text: "Spanish", img: "spain-flag.svg" },
     ]
   },
 ]
