@@ -1,0 +1,18 @@
+{
+    "about": {
+        "chat_with_me": "Je serais ravie de discuter avec vous des possibles opportunités d'emploi, de mes projets, de tech ou de tout ce qui vous passe par la tête. N'hésitez pas à me contacter.",
+        "download_resume": "Télécharger mon CV",
+        "learn_more": "En savoir plus",
+        "me": "A propos",
+        "who": "Je suis Kim-Anh. J'ai { my_age } ans. Je suis Ingénieure logiciel de l'INSA de Toulouse. Je suis intéressée par le développement logiciel, le développement web et la conception de jeux vidéo. Ci-dessous se trouve une partie de mes projets personnels."
+    },
+    "nav": {
+        "about": "A propos",
+        "contact": "Contact",
+        "hobbies": "Loisirs",
+        "home": "Accueil",
+        "portfolio": "Portfolio",
+        "skills": "Compétences"
+    },
+    "role": "Ingénieure logiciel de l'INSA Toulouse"
+}

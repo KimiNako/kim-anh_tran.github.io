@@ -1,5 +1,27 @@
-import { createApp } from 'vue';
-import App from './App.vue';
-import router from './router';
+/**
+ * main.ts
+ *
+ * Bootstraps Vuetify and other plugins then mounts the App`
+ */
 
-createApp(App).use(router).mount('#app');
+// Components
+import App from './App.vue'
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faGithub, faLinkedin, faItchIo } from '@fortawesome/free-brands-svg-icons'
+// Composables
+import { createApp } from 'vue'
+
+// Plugins
+import { registerPlugins } from '@/plugins'
+
+library.add(faGithub, faLinkedin, faItchIo)
+
+const app = createApp(App)
+
+registerPlugins(app)
+
+app
+    .component('font-awesome-icon', FontAwesomeIcon)
+    .mount('#app')

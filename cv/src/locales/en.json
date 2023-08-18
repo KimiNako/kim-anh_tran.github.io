@@ -1,0 +1,18 @@
+{
+    "about": {
+        "chat_with_me": "I would love to chat about job opportunities, my projects, diversity in tech, or whatever is on your mind. So do not hesiate to contact me.",
+        "download_resume": "Download my resume",
+        "learn_more": "Learn more",
+        "me": "About me",
+        "who": "I am Kim-Anh. I am {{ my_age }} years old. I am a Software Engineer from INSA de Toulouse, France. I am interested in software development, web development and video games. You could see some of my projects below."
+    },
+    "nav": {
+        "about": "About me",
+        "contact": "Contact",
+        "hobbies": "Hobbies",
+        "home": "Home",
+        "portfolio": "Portfolio",
+        "skills": "Skills"
+    },
+    "role": "Software engineer from INSA Toulouse"
+}

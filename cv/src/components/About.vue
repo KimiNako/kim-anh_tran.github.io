@@ -1,142 +1,52 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br />
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
-        >vue-cli documentation</a
-      >.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
-          target="_blank"
-          rel="noopener"
-          >babel</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router"
-          target="_blank"
-          rel="noopener"
-          >router</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
-          target="_blank"
-          rel="noopener"
-          >eslint</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-unit-jest"
-          target="_blank"
-          rel="noopener"
-          >unit-jest</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-typescript"
-          target="_blank"
-          rel="noopener"
-          >typescript</a
-        >
-      </li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li>
-        <a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a>
-      </li>
-      <li>
-        <a href="https://forum.vuejs.org" target="_blank" rel="noopener"
-          >Forum</a
-        >
-      </li>
-      <li>
-        <a href="https://chat.vuejs.org" target="_blank" rel="noopener"
-          >Community Chat</a
-        >
-      </li>
-      <li>
-        <a href="https://twitter.com/vuejs" target="_blank" rel="noopener"
-          >Twitter</a
-        >
-      </li>
-      <li>
-        <a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a>
-      </li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li>
-        <a href="https://router.vuejs.org" target="_blank" rel="noopener"
-          >vue-router</a
-        >
-      </li>
-      <li>
-        <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-devtools#vue-devtools"
-          target="_blank"
-          rel="noopener"
-          >vue-devtools</a
-        >
-      </li>
-      <li>
-        <a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener"
-          >vue-loader</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-          rel="noopener"
-          >awesome-vue</a
-        >
-      </li>
-    </ul>
-  </div>
+	<section id="about" class="pa-4">
+		<h2 class="section-title">
+			{{ $t('about.me') }}
+		</h2>
+		<img src="src/assets/photo_profile.png" alt="profile picture">
+		<div class="about-text">
+			<p>{{ $tc('about.who', { my_age: my_age }) }}</p>
+			<br />
+			<p>{{ $t('about.chat_with_me') }}</p>
+		</div>
+		<div class="contact mb-12">
+			<v-btn href="https://github.com/KimiNako" class="about-icon" target="_blank" variant="text">
+				<font-awesome-icon icon="fa-brands fa-github" size="2xl" />
+			</v-btn>
+			<v-btn href="https://fr.linkedin.com/in/kimanh-tran" class="about-icon" target="_blank" variant="text">
+				<font-awesome-icon icon="fa-brands fa-linkedin" size="2xl" />
+			</v-btn>
+			<v-btn href="https://kiminako.itch.io/" class="about-icon" target="_blank" variant="text">
+				<font-awesome-icon icon="fa-brands fa-itch-io" size="2xl" />
+			</v-btn>
+		</div>
+	</section>
 </template>
 
-<script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-
-@Options({
-  props: {
-    msg: String,
-  },
-})
-export default class About extends Vue {
-  msg!: string;
-}
+<script lang="ts" setup>
+const my_age = new Date().getFullYear() - 1997;
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
+<style lang="scss" scoped>
+@import '@/styles/global.scss';
+
+#about {
+	background-color: map-get($theme-color, "blue");
+	color: white;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.about-icon {
+	font-size: 40px;
+	height: 80px;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+
+.about-text {
+	font-size: 18px;
+	margin: 25px auto;
+	max-width: 55rem;
+	a {
+		color: white;
+		text-decoration: none;
+	}
 }
 </style>
