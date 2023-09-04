@@ -3,8 +3,31 @@
         "chat_with_me": "Je serais ravie de discuter avec vous des possibles opportunités d'emploi, de mes projets, de tech ou de tout ce qui vous passe par la tête. N'hésitez pas à me contacter.",
         "download_resume": "Télécharger mon CV",
         "learn_more": "En savoir plus",
-        "me": "A propos",
+        "title": "A propos",
         "who": "Je suis Kim-Anh. J'ai { my_age } ans. Je suis Ingénieure logiciel de l'INSA de Toulouse. Je suis intéressée par le développement logiciel, le développement web et la conception de jeux vidéo. Ci-dessous se trouve une partie de mes projets personnels."
+    },
+    "hobbies": {
+        "title": "Loisirs",
+        "contest": "Concours",
+        "contest_7": "Mai 2023 {'|'} 829/5290 {'|'} Spring Challenge 2023, un concours de code par CodinGame",
+        "contest_6": "Décembre 2022 {'|'} 560/4577 {'|'} Fall Challenge 2022, un concours de code par CodinGame",
+        "contest_5": "Juin 2022 {'|'} 255/1758 {'|'} Green Circle, un concours de code par CodinGame",
+        "contest_4": "Mars 2021 {'|'} 1ère place {'|'} Jap'n'Tregor 2021, un concours de dessin 🏆",
+        "contest_3": "Ocotbre 2019 {'|'} 1ère place {'|'} Concours 'Pitch ton stage en 180s' 🏆",
+        "contest_2": "Juin 2019 {'|'} Lauréate {'|'} Équipe de 3 {'|'} CRECE, un concours entrepreunarial",
+        "contest_1": "Mars 2019 {'|'} 1ère place {'|'} Équipe de 5 {'|'} Cod'INSA 2019, un concours de code pour tous les étudiants du Groupe INSA 🏆",
+        "contest_0": "Février 2019 {'|'} 1964/6671 {'|'} Équipe de 2 {'|'} Hash Code 2019, un concours de code par Google",
+        "drawing": {
+            "title": "Dessin",
+            "kitsune": "Une kitsune au clair de lune {'|'} Paint Tool Sai {'|'} Mars 2021",
+            "fox": "Une famille de renards sous un ciel étoilé {'|'} Photoshop {'|'} Décembre 2021",
+            "cinderella": "Illustration pour Where are you, Cinderella? {'|'} Paint Tool Sai {'|'} Octobre 2022",
+            "hanfu_my_lady": "My lady {'|'} Clip Studio Paint et modèle 3D {'|'} Décembre 2021",
+            "netjuu_no_susume": "Fan art de Lily de Netjuu no Susume {'|'} Paint Tool Sai {'|'} Décembre 2017",
+            "whale": "À la conquête de la lune {'|'} Photoshop {'|'} Août 2023",
+            "molly": "Fan art de deux personnages originaux de Molly {'|'} Paint Tool Sai {'|'} Décembre 2021",
+            "hanfu_new_year": "Hanfu {'|'} Paint Tool Sai {'|'} Janvier 2023"
+        }
     },
     "nav": {
         "about": "A propos",
@@ -14,5 +37,23 @@
         "portfolio": "Portfolio",
         "skills": "Compétences"
     },
-    "role": "Ingénieure logiciel de l'INSA Toulouse"
+    "portfolio": {
+        "title": "Portfolio"
+    },
+    "role": "Ingénieure logiciel de l'INSA Toulouse",
+    "skills": {
+        "art": "UI/UX, Art & Audiovisuel",
+        "game_development": "Conception de jeux vidéo",
+        "languages": {
+            "english": "Anglais",
+            "french": "Français",
+            "spanish": "Espagnol",
+            "vietnamese": "Vietnamien"
+        },
+        "programming": "Langages de programmation",
+        "project_management": "Gestion de projets",
+        "speaking": "Langues",
+        "title": "Compétences",
+        "web_development": "Développement web"
+    }
 }

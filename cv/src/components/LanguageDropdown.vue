@@ -27,9 +27,10 @@ const langs = [
     color: map-get($theme-color, "grey");
     font-family: "Montserrat", serif;
     max-width: 125px;
-    position: absolute;
+    position: fixed;
     right: 17px;
     top: 18px;
+    z-index: 1;
 }
 
 .language-option {

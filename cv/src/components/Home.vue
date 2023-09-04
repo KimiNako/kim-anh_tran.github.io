@@ -38,9 +38,10 @@
   background: url("@/assets/header.jpg") center center no-repeat fixed;
   background-size: cover;
   height: 725px;
+  position: relative;
 }
 .overlay {
-	background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8);
 	height: 100%;
 	left: 0;
   position: relative;
@@ -51,6 +52,7 @@
 .home-content {
 	color: #ffffff;
 	margin: 0;
+  margin-top: -89px;
 	position: absolute;
 	text-align: center;
   top: 29em;

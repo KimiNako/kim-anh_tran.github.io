@@ -1,18 +1,20 @@
 <template>
-	<section id="skills" class="pa-4">
-		<h2 class="section-title">Skills</h2>
-				<div class="skills-container" v-for="skill in skills" :key="skill.title">
-					<v-row>
-            <v-col>{{ skill.title }}</v-col>
-          </v-row>
-					<v-row>									
-            <v-col class="skills-content" v-for="item in skill.items" :key="item.text">
-              <img :src="`src/assets/skills/${item.img}`" class="icon" :title=item.text>
-              <div v-if="!skill.trad">{{ item.text }}</div>
-              <div v-else>{{ $t(item.text) }}</div>
-            </v-col>
-          </v-row>
-        </div>
+	<section id="skills" >
+    <div class="pa-4 skills-container">
+      <h2 class="section-title">{{ $t('skills.title') }}</h2>
+      <div class="skills-box" v-for="skill in skills" :key="skill.title">
+        <v-row>
+          <v-col>{{ $t(skill.title) }}</v-col>
+        </v-row>
+        <v-row>									
+          <v-col class="skills-content" v-for="item in skill.items" :key="item.text">
+            <img :src="`src/assets/skills/${item.img}`" class="icon" :title=item.text>
+            <div v-if="!skill.trad">{{ item.text }}</div>
+            <div v-else>{{ $t(item.text) }}</div>
+          </v-col>
+        </v-row>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -20,7 +22,7 @@
 
 const skills = [
   {
-    title: 'Programming',
+    title: 'skills.programming',
     items: [
       { text: "C", img: "c_logo.png" },
       { text: "C#", img: "csharp_logo.png" },
@@ -30,7 +32,7 @@ const skills = [
     ]
   },
   {
-    title: 'Web development',
+    title: 'skills.web_development',
     items: [
       { text: "HTML", img:"html_logo.png"},
       { text: "CSS", img:"css_logo.png"},
@@ -46,10 +48,10 @@ const skills = [
     ]
   },
   {
-    title: 'UI/UX, Art & Audiovisual',
+    title: 'skills.art',
     items: [
       { text: "XD", img: "adobexd_logo.svg" },
-      { text: "Figma", img: "figma_logo.svg" },
+      { text: "Figma", img: "figma_logo.png" },
       { text: "Sketch", img: "sketch_logo.png" },
       { text: "Clip Studio Paint", img: "csp_logo.png" },
       { text: "Paint Tool Sai", img: "pts_logo.png" },
@@ -63,7 +65,7 @@ const skills = [
     ]
   },
   {
-    title: 'Game Development',
+    title: 'skills.game_development',
     items: [
       { text: "Ren'Py", img: "renpy_logo.png" },
       { text: "Unity", img: "unity_logo.png" },
@@ -71,7 +73,7 @@ const skills = [
     ]
   },
   {
-    title: 'Project Management',
+    title: 'skills.project_management',
     items: [
       { text: "Git", img: "git_logo.png" },
       { text: "GitHub", img: "github_logo.png" },
@@ -81,31 +83,37 @@ const skills = [
     ]
   },
   {
-    title: 'Speaking',
+    title: 'skills.speaking',
     trad: true,
     items: [
-      { text: "French", img: "france-flag.svg" },
-      { text: "English", img: "united-kingdom-flag.svg" },
-      { text: "Vietnamese", img: "vietnam-flag.svg" },
-      { text: "Spanish", img: "spain-flag.svg" },
+      { text: "skills.languages.french", img: "france-flag.svg" },
+      { text: "skills.languages.english", img: "united-kingdom-flag.svg" },
+      { text: "skills.languages.vietnamese", img: "vietnam-flag.svg" },
+      { text: "skills.languages.spanish", img: "spain-flag.svg" },
     ]
   },
 ]
 
 </script>
 
-<style scoped>
+<style lang="scss"  scoped>
+@import '@/styles/global.scss';
+.skills-container {
+  background-color: white;
+}
+
 .section-title {
   color: black;
 }
 
-.skills-container {
+.skills-box {
   margin: 0 auto 100px;
   max-width: 35rem;
 }
 .skills-content {
-  color: #333;
+  color: map-get($theme-color, "black");
   font-size: 12px;
+  min-height: 121px;
 }
 
 .icon {

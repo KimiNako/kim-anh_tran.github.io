@@ -2,7 +2,7 @@
   <v-app>
     <v-main>  
       <nav>
-        <router-link to="/" :class="{active : !$route.hash}">{{ $t('nav.home') }}</router-link>
+        <router-link :to="{ path: '/', hash: '#home' }" :class="{active : !$route.hash || $route.hash == '#home'}">{{ $t('nav.home') }}</router-link>
         <router-link :to="{ path: '/', hash: '#about' }" :class="{active : $route.hash == '#about'}">{{ $t('nav.about') }}</router-link>
         <router-link :to="{ path: '/', hash: '#skills' }" :class="{active : $route.hash == '#skills'}">{{ $t('nav.skills') }}</router-link>
         <router-link :to="{ path: '/', hash: '#portfolio' }" :class="{active : $route.hash == '#portfolio'}">{{ $t('nav.portfolio') }}</router-link>
@@ -27,6 +27,6 @@ import LanguageDropdown from '@/components/LanguageDropdown.vue';
 </style>
 
 <!--
-  Scroll correctement
+  trad
   Responsive mobile
 -->
