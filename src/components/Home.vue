@@ -9,7 +9,7 @@
       <h5>{{ $t('role') }}</h5>
       <div class="cta-container">
         <v-btn
-          class="mx-4 px-4 home-btn "
+          class="ma-4 px-4 home-btn "
           elevated
           href="#about"
           rounded="xs"
@@ -18,7 +18,7 @@
           {{ $t('about.learn_more')}}
         </v-btn>
         <v-btn
-          class="mx-4 px-4 home-btn"
+          class="ma-4 px-4 home-btn"
           elevated
           href="/src/assets/CV_fr.pdf"
           rounded="xs"
@@ -55,7 +55,7 @@
   margin-top: -89px;
 	position: absolute;
 	text-align: center;
-  top: 29em;
+  top: 33em;
 	transform: translateY(-50%);
 	width: 100%;
 }

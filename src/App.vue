@@ -26,7 +26,6 @@ import LanguageDropdown from '@/components/LanguageDropdown.vue';
 }
 </style>
 
-<!--
-  trad
-  Responsive mobile
+<!-- TODO
+  Responsive mobile : menu, loisir, portoflio 
 -->
