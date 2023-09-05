@@ -24,7 +24,7 @@
           <v-img
             class="align-end text-white"
             height="200"
-            :src="`/src/assets/portfolio/${item.tag}.png`"
+            :src="generateUrlImg(item.tag)"
             cover
           >
           </v-img>
@@ -121,6 +121,11 @@ export default {
     computed: {
       filteredElements: function() {
         return this.projects.filter(item => (item.theme?.includes(this.filter)) || this.filter === Theme.All);
+      }
+    },
+    methods: {
+      generateUrlImg: function(tag: string) {
+        return new URL(`/src/assets/portfolio/${tag}.png`, import.meta.url).href
       }
     }
 }

@@ -9,7 +9,7 @@
         hide-details
     >
         <template v-slot:selection="{ item }">
-            <img :src="`/src/assets/${item.value}.png`" :alt="item.value">
+            <img :src="generateUrlImg(item.value)" :alt="item.value">
         </template>
     </v-select>
 </template>
@@ -19,6 +19,10 @@ const langs = [
     { title: 'English', tag: 'en' },
     { title: 'Français', tag: 'fr' }
 ]
+
+const generateUrlImg = function(value: string) {
+return new URL(`/src/assets/${value}.png`, import.meta.url).href
+}
 </script>
 
 <style lang="scss" scoped>

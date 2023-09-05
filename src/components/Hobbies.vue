@@ -10,17 +10,17 @@
           <template v-for="image in imageLayout" :key="image.id">
             <v-col :cols="image.cols">
               <v-img
-                :src="`/src/assets/hobbies/${image.id}.png`"
+                :src="generateUrlImg(image.id)"
                 cover
                 height="100%"
-                    @click="setSelectedItem(image)"
+                @click="setSelectedItem(image)"
               ></v-img>
             </v-col>
             <v-col v-if="image.children" cols="6" class="d-flex flex-column">
               <v-row>
                 <v-col v-for="children in image.children" :key="children.id" :cols="children.cols">
-                  <v-img          
-                    :src="`/src/assets/hobbies/${children.id}.png`"
+                  <v-img
+                    :src="generateUrlImg(children.id)"
                     cover
                     height="100%"
                     @click="setSelectedItem(children)"
@@ -49,7 +49,7 @@
             <v-card-text class="px-3 pb-3 pt-0">
               <v-img
                 class="drawing-selected"
-                    :src="`/src/assets/hobbies/${selectedItem.id}.png`"
+                :src="generateUrlImg(selectedItem.id)"
               ></v-img>
             </v-card-text>
           </v-card>
@@ -71,6 +71,7 @@
 </template>
 
 <script lang="ts">
+
 export default {
     data () {
       return {
@@ -106,6 +107,9 @@ export default {
       setSelectedItem: function(selectedItem: any) {
         this.selectedItem = selectedItem;
         this.dialog = !this.dialog;
+      },
+      generateUrlImg: function(id: number) {
+        return new URL(`/src/assets/hobbies/${id}.png`, import.meta.url).href
       }
     }
 
