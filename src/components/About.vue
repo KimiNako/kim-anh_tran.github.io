@@ -4,7 +4,7 @@
 			<h2 class="section-title">
 				{{ $t('about.title') }}
 			</h2>
-			<img src="src/assets/photo_profile.png" alt="profile picture">
+			<img src="/src/assets/photo_profile.png" alt="profile picture">
 			<div class="about-text">
 				<p>{{ $tc('about.who', { my_age: my_age }) }}</p>
 				<br />

@@ -2,7 +2,7 @@
   <section id="home">
     <div class="overlay">
     <a id="down-icon" class="down-icon" href="#about">
-      <img class="down-arrow" src="src/assets/down_icon.svg" alt="Down arrow">
+      <img class="down-arrow" src="/src/assets/down_icon.svg" alt="Down arrow">
     </a></div>
     <div class="home-content">
       <h2>Kim-Anh Tran</h2> <br>
@@ -20,7 +20,7 @@
         <v-btn
           class="mx-4 px-4 home-btn"
           elevated
-          href="src/assets/CV_fr.pdf"
+          href="/src/assets/CV_fr.pdf"
           rounded="xs"
           target="_blank"
           color="light-blue-accent-3"
