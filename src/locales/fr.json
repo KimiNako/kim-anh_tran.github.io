@@ -38,7 +38,54 @@
         "skills": "Compétences"
     },
     "portfolio": {
-        "title": "Portfolio"
+        "title": "Portfolio",
+        "all": "Tout",
+        "art": "Art",
+        "project_management": "Gestion de projets",
+        "software_development": "Développement logiciel",
+        "learn_more": "En savoir plus",
+        "project": {
+            "wayc": {
+                "title": "Where are you, Cinderella ?",
+                "description": "Création d'un visual novel sur le monde du divertissement et de la culture vietnamienne"
+            },
+            "piano": {
+                "title": "River flows in you",
+                "description": "Reprise au piano de River flows in you de Yiruma après un an de pratique"
+            },
+            "codinsa": {
+                "title": "Cod'INSA",
+                "description": "Présidente de Cod'INSA, association organisant le concours de programmation du Groupe INSA"
+            },
+            "santa_pumkin": {
+                "title": "Santa Pumpkin",
+                "description": "Création d'un escape game en ligne sur Noël et les citrouilles"
+            },
+            "colors": {
+                "title": "Colors",
+                "description": "Création d'un visual novel sur le monde des couleurs"
+            },
+            "bam": {
+                "title": "Ballads at Midnight",
+                "description": "Création de la bande d'annonce du visual novel Ballads at Midnight"
+            },
+            "atelier_jv": {
+                "title": "Créer son premier jeu vidéo",
+                "description": "Animation d'un atelier pour créer son premier jeu sur Godot à l'INSA Toulouse"
+            },
+            "enfoiros": {
+                "title": "Enfoiros",
+                "description": "Photographe bénévole pour les Enfoiros, association soutenant les Restos du Cœur"
+            },
+            "studio_insa": {
+                "title": "Studio INSA",
+                "description": "Membre d'une commission audiovisuelle pour couvrir des événements de l'INSA Toulouse"
+            },
+            "match": {
+                "title": "It's a Match!",
+                "description": "Développement d'un jeu de matching pour la GMTK Game Jam"
+            }
+        }
     },
     "role": "Ingénieure logiciel de l'INSA Toulouse",
     "skills": {

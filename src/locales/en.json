@@ -38,12 +38,59 @@
         "skills": "Skills"
     },
     "portfolio": {
-        "title": "Portfolio"
+        "title": "Portfolio",
+        "all": "All",
+        "art": "Art",
+        "project_management": "Project management",
+        "software_development": "Software development",
+        "learn_more": "Learn more",
+        "project": {
+            "wayc": {
+                "title": "Where are you, Cinderella?",
+                "description": "Creation of a visual novel about the showbiz and Vietnamese culture"
+            },
+            "piano": {
+                "title": "River flows in you",
+                "description": "Piano cover of River flows in you by Yiruma after a year of practice"
+            },
+            "codinsa": {
+                "title": "Cod'INSA",
+                "description": "Head of Cod'INSA, association organizing the INSA Group programming competition"
+            },
+            "santa_pumkin": {
+                "title": "Santa Pumpkin",
+                "description": "Creation of an online escape game about Christmas and pumpkins"
+            },
+            "colors": {
+                "title": "Colors",
+                "description": "Creation of a visual novel about the world of colors"
+            },
+            "bam": {
+                "title": "Ballads at Midnight",
+                "description": "Creation of the trailer for the visual novel Ballads at Midnight"
+            },
+            "atelier_jv": {
+                "title": "Creating your first video game",
+                "description": "Workshop to create your first Godot game at INSA Toulouse"
+            },
+            "enfoiros": {
+                "title": "Enfoiros",
+                "description": "Volunteer photographer for the Enfoiros, an association supporting the Restos du Cœur"
+            },
+            "studio_insa": {
+                "title": "Studio INSA",
+                "description": "Member of an audivisual commission to cover INSA Toulouse events"
+            },
+            "match": {
+                "title": "It's a Match!",
+                "description": "Development of a matching game for the GMTK Game Jam"
+            }
+        }
     },
     "role": "Software engineer from INSA Toulouse",
     "skills": {
         "art": "UI/UX, Art & Audiovisual",
-        "game_development": "Game Development",
+        "game_development": "Game development",
         "languages": {
             "english": "English",
             "french": "French",
@@ -51,7 +98,7 @@
             "vietnamese": "Vietnamese"
         },
         "programming": "Programming languages",
-        "project_management": "Project Management",
+        "project_management": "Project management",
         "title": "Skills",
         "speaking": "Speaking",
         "web_development": "Web development"
