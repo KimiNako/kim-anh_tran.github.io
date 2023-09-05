@@ -20,18 +20,23 @@
         <v-btn
           class="ma-4 px-4 home-btn"
           elevated
-          href="/src/assets/CV_fr.pdf"
+          :href="generateUrl($i18n.locale)"
           rounded="xs"
           target="_blank"
           color="light-blue-accent-3"
         >
           {{ $t('about.download_resume')}}
         </v-btn>
-        <a  ></a>
       </div>
     </div>
   </section>
 </template>
+
+<script lang="ts" setup>
+const generateUrl = function(value: string) {
+    return new URL(`/src/assets/CV_${value}.pdf`, import.meta.url).href
+}
+</script>
 
 <style lang="scss" scoped>
 #home {
