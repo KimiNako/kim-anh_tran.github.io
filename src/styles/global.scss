@@ -14,29 +14,6 @@ body {
     text-align: center;
 }
 
-nav {
-    align-items: center;
-    background: white;
-    display: flex;
-    height: 90px;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-}
-
-nav a {
-    color: map-get($theme-color, "grey");
-    font-size: 13px;
-    margin: 0 23px;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    &:hover {
-        color: map-get($theme-color, "blue");
-    }
-}
-
 h1,
 h2,
 h5 {

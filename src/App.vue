@@ -93,8 +93,3 @@ nav a, .nav a {
   color: map-get($theme-color, "blue");
 }
 </style>
-
-<!-- TODO
-  Responsive mobile : loisir, portoflio 
-  Arrow loisirs dessin
--->

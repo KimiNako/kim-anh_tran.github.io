@@ -19,7 +19,7 @@
           class="pa-4"
         >
         <v-card
-          width="400"
+          :width="portfolioCardWidth"
         >
           <v-img
             class="align-end text-white"
@@ -121,7 +121,10 @@ export default {
     computed: {
       filteredElements: function() {
         return this.projects.filter(item => (item.theme?.includes(this.filter)) || this.filter === Theme.All);
-      }
+      },
+      portfolioCardWidth: function() {
+        return this.$vuetify.display.name === 'xs' ? '300px' : '400px';
+      },
     },
     methods: {
       generateUrlImg: function(tag: string) {
