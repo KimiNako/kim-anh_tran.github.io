@@ -52,10 +52,10 @@
 
 <script lang="ts">
 enum Theme {
-  All = "All",
-  Art = 'Art',
-  Project_management = 'Project management',
-  Software_development = 'Software development',
+  All = "all",
+  Art = 'art',
+  Project_management = 'project_management',
+  Software_development = 'software_development',
 }
 
 export default {

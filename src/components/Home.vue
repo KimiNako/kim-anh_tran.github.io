@@ -20,7 +20,7 @@
         <v-btn
           class="mx-4 px-4 home-btn"
           elevated
-          href="img/CV_Kim-Anh_Tran.png"
+          href="src/assets/CV_fr.pdf"
           rounded="xs"
           target="_blank"
           color="light-blue-accent-3"
