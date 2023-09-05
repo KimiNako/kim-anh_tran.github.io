@@ -2,7 +2,7 @@
   <v-app>
     <v-main>
       <div class="d-flex d-md-none">
-      <v-app-bar height="90px"><v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon></v-app-bar>
+        <v-app-bar height="90px"><v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon></v-app-bar>
         <v-navigation-drawer
           v-model="drawer"
           temporary
@@ -95,5 +95,6 @@ nav a, .nav a {
 </style>
 
 <!-- TODO
-  Responsive mobile : menu, loisir, portoflio 
+  Responsive mobile : loisir, portoflio 
+  Arrow loisirs dessin
 -->
