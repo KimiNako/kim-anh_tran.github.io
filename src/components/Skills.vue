@@ -8,7 +8,7 @@
         </v-row>
         <v-row>									
           <v-col class="skills-content" v-for="item in skill.items" :key="item.text">
-            <img :src="`src/assets/skills/${item.img}`" class="icon" :title=item.text>
+            <img :src="`/src/assets/skills/${item.img}`" class="icon" :title=item.text>
             <div v-if="!skill.trad">{{ item.text }}</div>
             <div v-else>{{ $t(item.text) }}</div>
           </v-col>

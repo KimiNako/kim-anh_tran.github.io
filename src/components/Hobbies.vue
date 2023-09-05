@@ -10,7 +10,7 @@
           <template v-for="image in imageLayout" :key="image.id">
             <v-col :cols="image.cols">
               <v-img
-                :src="`src/assets/hobbies/${image.id}.png`"
+                :src="`/src/assets/hobbies/${image.id}.png`"
                 cover
                 height="100%"
                     @click="setSelectedItem(image)"
@@ -20,7 +20,7 @@
               <v-row>
                 <v-col v-for="children in image.children" :key="children.id" :cols="children.cols">
                   <v-img          
-                    :src="`src/assets/hobbies/${children.id}.png`"
+                    :src="`/src/assets/hobbies/${children.id}.png`"
                     cover
                     height="100%"
                     @click="setSelectedItem(children)"
@@ -49,7 +49,7 @@
             <v-card-text class="px-3 pb-3 pt-0">
               <v-img
                 class="drawing-selected"
-                    :src="`src/assets/hobbies/${selectedItem.id}.png`"
+                    :src="`/src/assets/hobbies/${selectedItem.id}.png`"
               ></v-img>
             </v-card-text>
           </v-card>

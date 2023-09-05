@@ -9,7 +9,7 @@
         hide-details
     >
         <template v-slot:selection="{ item }">
-            <img :src="`src/assets/${item.value}.png`" :alt="item.value">
+            <img :src="`/src/assets/${item.value}.png`" :alt="item.value">
         </template>
     </v-select>
 </template>

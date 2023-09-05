@@ -24,7 +24,7 @@
           <v-img
             class="align-end text-white"
             height="200"
-            :src="`src/assets/portfolio/${item.image}`"
+            :src="`/src/assets/portfolio/${item.image}`"
             cover
           >
           </v-img>
