@@ -6,6 +6,7 @@
         "title": "About me",
         "who": "I am Kim-Anh. I am { my_age } years old. I am a Software Engineer from INSA de Toulouse, France. I am interested in software development, web development and video games. You could see some of my projects below."
     },
+    "copyright": "All Rights Reserved",
     "hobbies": {
         "title": "Hobbies",
         "contest": "Contest",

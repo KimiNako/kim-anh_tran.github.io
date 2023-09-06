@@ -1,6 +1,6 @@
 <template>
 	<footer id="footer">
-		<p class="copyright pa-2"> © {{ current_year }} • Kim-Anh Tran • All Rights Reserved</p>
+		<p class="copyright pa-2"> © {{ current_year }} • Kim-Anh Tran • {{ $t('copyright')}}</p>
 	</footer>
 </template>
 
