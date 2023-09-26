@@ -41,7 +41,7 @@ export default defineConfig({
     rollupOptions: {
       input: entryPoints(
         "index.html",
-        "src/components/games/wayc/index.html",
+        "games/wayc/index.html",
       ),
     },
   }
