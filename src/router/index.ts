@@ -1,10 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Main from '@/views/Main.vue';
+import Mentions from '@/components/games/wayc/Mentions.vue';
 const routes = [
 	{
 		path: '/',
 		name: 'home',
 		component: Main,
+	},
+	{
+		path: '/game/wayc/mentions',
+		name: 'mentions',
+		component: Mentions,
 	},
 ]
 
