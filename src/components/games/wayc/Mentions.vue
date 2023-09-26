@@ -186,9 +186,9 @@
                 If you have any questions or suggestions about my
                 Privacy Policy, do not hesitate to contact me at kiminako.pro@gmail.com
             </p>
-
-    </div>
-</section></template>
+        </div>
+    </section>
+</template>
 
 
 <style lang="scss">.mentions {

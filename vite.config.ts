@@ -5,6 +5,7 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 // Utilities
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
+import { join, parse, resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -38,12 +39,23 @@ export default defineConfig({
   build: {
     outDir: './dist',
     rollupOptions: {
-      external: ['vue'],
-      output: {
-        globals: {
-          vue: 'Vue',
-        },
-      },
+      input: entryPoints(
+        "index.html",
+        "foo/index.html",
+        "foo/bar/index.html",
+      ),
     },
   }
 })
+
+function entryPoints(...paths) {
+  const entries = paths.map(parse).map(entry => {
+    const { dir, base, name, ext } = entry;
+    const key = join(dir, name);
+    const path = resolve(__dirname, dir, base);
+    return [key, path];
+  });
+  
+  const config = Object.fromEntries(entries);
+  return config;
+}
