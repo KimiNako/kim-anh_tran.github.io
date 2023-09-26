@@ -8,7 +8,7 @@ const routes = [
 		component: Main,
 	},
 	{
-		path: '/game/wayc/mentions',
+		path: '/mentions',
 		name: 'mentions',
 		component: Mentions,
 	},
